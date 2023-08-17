@@ -1,0 +1,21 @@
+//Bậc của số nguyên tố trong n giai thừa
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+long long count(long long n , long long p){
+	long long res = 0 ;
+	for (long long i  = p; i <= n ; i *= p ){
+		res += n/i ;
+	}
+	return res ;
+}
+int main()
+	{
+	long long n, p ;
+	cin >> n >> p ;
+	long long result = count(n,p) ;
+	cout << result ;
+	 return 0;
+	}
